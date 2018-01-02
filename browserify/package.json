@@ -1,0 +1,18 @@
+{
+  "name": "ol-layerswitcher-browserify",
+  "version": "1.0.0",
+  "description": "Example using ol and ol-layerswitcher with Browserify",
+  "scripts": {
+    "build": "browserify main.js --transform [ babelify --plugins [ transform-es2015-modules-commonjs ] ] | uglifyjs -c -m > bundle.js"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.22.0",
+    "babelify": "^7.3.0",
+    "browserify": "^14.0.0",
+    "uglify-js": "^2.7.5"
+  },
+  "dependencies": {
+    "ol": ">4.0.0",
+    "ol3-layerswitcher": "git+https://github.com/walkermatt/ol3-layerswitcher.git#ol"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "ol-layerswitcher-parcel",
+  "version": "1.0.0",
+  "description": "Example using ol and ol-layerswitcher with Parcel",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build --public-url ./ index.html"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.3.0"
+  },
+  "dependencies": {
+    "ol": ">4.0.0",
+    "ol3-layerswitcher": "git+https://github.com/walkermatt/ol3-layerswitcher.git#ol"
+  }
+}

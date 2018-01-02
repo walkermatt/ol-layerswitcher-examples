@@ -1,0 +1,17 @@
+{
+  "name": "ol-layerswitcher-webpack",
+  "version": "1.0.0",
+  "description": "Example using ol and ol-layerswitcher with Webpack",
+  "scripts": {
+    "build": "webpack --config webpack.config.js"
+  },
+  "devDependencies": {
+    "css-loader": "^0.28.4",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.3.0"
+  },
+  "dependencies": {
+    "ol": ">4.0.0",
+    "ol3-layerswitcher": "git+https://github.com/walkermatt/ol3-layerswitcher.git#ol"
+  }
+}
