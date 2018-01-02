@@ -1,4 +1,4 @@
-# ol & ol-layerswitcher + Webpack
+# ol & ol-layerswitcher with Webpack
 
 This example demonstrates how the `ol` package and ol-layerswitcher with Webpack.
 

@@ -1,4 +1,4 @@
-# ol & ol-layerswitcher + Parcel
+# ol & ol-layerswitcher with Parcel
 
 This example demonstrates how the `ol` package and ol-layerswitcher with Parcel.
 
