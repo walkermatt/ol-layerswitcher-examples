@@ -1,5 +1,5 @@
 import 'ol/ol.css';
-import 'ol3-layerswitcher/src/ol3-layerswitcher.css';
+import 'ol-layerswitcher/src/ol-layerswitcher.css';
 
 import Map from 'ol/map';
 import View from 'ol/view';
@@ -11,7 +11,7 @@ import SourceImageArcGISRest from 'ol/source/imagearcgisrest';
 import SourceOSM from 'ol/source/osm';
 import SourceStamen from 'ol/source/stamen';
 
-import LayerSwitcher from 'ol3-layerswitcher';
+import LayerSwitcher from 'ol-layerswitcher';
 
 var map = new Map({
     target: 'map',
