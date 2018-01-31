@@ -13,6 +13,6 @@
   },
   "dependencies": {
     "ol": ">4.0.0",
-    "ol-layerswitcher": "git+https://github.com/walkermatt/ol3-layerswitcher.git#ol"
+    "ol-layerswitcher": ">=2.0.0"
   }
 }
