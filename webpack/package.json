@@ -11,7 +11,7 @@
     "webpack": "^3.3.0"
   },
   "dependencies": {
-    "ol": ">4.0.0",
-    "ol-layerswitcher": ">=2.0.0"
+    "ol": ">=5.0.0",
+    "ol-layerswitcher": "git+https://github.com/walkermatt/ol-layerswitcher.git#ol5"
   }
 }
