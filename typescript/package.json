@@ -1,0 +1,19 @@
+{
+  "name": "ol-layerswitcher-typescript",
+  "description": "Example using ol and ol-layerswitcher with TypeScript",
+  "main": "main.js",
+  "scripts": {
+    "build": "npm run clean && mkdir -p build && cp -r src/* build && tsc --pretty && parcel build --public-url ./ build/index.html",
+    "clean": "rm -rf build/* dist/*"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "typescript": "^4.0.5",
+    "@types/ol": "^6.4.1"
+  },
+  "dependencies": {
+    "ol": "^6.4.3",
+    "ol-layerswitcher": "^3.8.0-beta.0"
+  }
+}
