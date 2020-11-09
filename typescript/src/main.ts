@@ -84,6 +84,9 @@ const map = new Map({
 
 const layerSwitcher = new LayerSwitcher({
     reverse: true,
-    groupSelectStyle: 'group'
+    groupSelectStyle: 'group',
+    startActive: true,
+    activationMode: 'click'
 });
+
 map.addControl(layerSwitcher);
