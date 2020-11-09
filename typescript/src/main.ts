@@ -25,56 +25,56 @@ import { BaseLayerOptions, GroupLayerOptions } from 'ol-layerswitcher';
 const map = new Map({
     target: 'map',
     layers: [
-        new LayerGroup(<GroupLayerOptions>{
+        new LayerGroup({
             'title': 'Base maps',
             layers: [
-                new LayerGroup(<GroupLayerOptions>{
+                new LayerGroup({
                     title: 'Water color with labels',
                     type: 'base',
                     combine: true,
                     visible: false,
                     layers: [
-                        new LayerTile(<BaseLayerOptions>{
+                        new LayerTile({
                             source: new SourceStamen({
                                 layer: 'watercolor'
                             })
                         }),
-                        new LayerTile(<BaseLayerOptions>{
+                        new LayerTile({
                             source: new SourceStamen({
                                 layer: 'terrain-labels'
                             })
                         })
                     ]
-                }),
-                new LayerTile(<BaseLayerOptions>{
+                } as GroupLayerOptions),
+                new LayerTile({
                     title: 'Water color',
                     type: 'base',
                     visible: false,
                     source: new SourceStamen({
                         layer: 'watercolor'
                     })
-                }),
-                new LayerTile(<BaseLayerOptions>{
+                } as BaseLayerOptions),
+                new LayerTile({
                     title: 'OSM',
                     type: 'base',
                     visible: true,
                     source: new SourceOSM()
-                })
+                } as BaseLayerOptions)
             ]
-        }),
-        new LayerGroup(<GroupLayerOptions>{
+        } as GroupLayerOptions),
+        new LayerGroup({
             title: 'Overlays',
             layers: [
-                new LayerImage(<BaseLayerOptions>{
+                new LayerImage({
                     title: 'Countries',
                     source: new SourceImageArcGISRest({
                         ratio: 1,
                         params: {'LAYERS': 'show:0'},
                         url: "https://ons-inspire.esriuk.com/arcgis/rest/services/Administrative_Boundaries/Countries_December_2016_Boundaries/MapServer"
                     })
-                })
+                } as BaseLayerOptions)
             ]
-        })
+        } as GroupLayerOptions)
     ],
     view: new View({
         center: transform([-0.92, 52.96], 'EPSG:4326', 'EPSG:3857'),
@@ -82,5 +82,8 @@ const map = new Map({
     })
 });
 
-const layerSwitcher = new LayerSwitcher();
+const layerSwitcher = new LayerSwitcher({
+    reverse: true,
+    groupSelectStyle: 'group'
+});
 map.addControl(layerSwitcher);
