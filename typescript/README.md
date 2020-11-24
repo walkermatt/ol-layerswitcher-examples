@@ -16,5 +16,6 @@ Create a build (output to the `dist` directory)
 
     npm run build
 
-See [www.typescriptlang.org](https://www.typescriptlang.org/) for more details of TypeScript and [parceljs.org](https://parceljs.org/) for details of using Parcel.
+Open `dist/index.html` in a browser to view the application.
 
+See [www.typescriptlang.org](https://www.typescriptlang.org/) for more details of TypeScript and [parceljs.org](https://parceljs.org/) for details of using Parcel.

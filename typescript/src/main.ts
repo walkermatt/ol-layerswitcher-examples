@@ -11,9 +11,12 @@ import SourceImageArcGISRest from 'ol/source/ImageArcGISRest';
 import SourceOSM from 'ol/source/OSM';
 import SourceStamen from 'ol/source/Stamen';
 
-import LayerSwitcher from 'ol-layerswitcher';
-
-import { BaseLayerOptions, GroupLayerOptions } from 'ol-layerswitcher';
+import LayerSwitcher, {
+    Options as LsOptions,
+    GroupSelectStyle,
+    BaseLayerOptions,
+    GroupLayerOptions,
+} from "ol-layerswitcher";
 
 // Create our map instance with required groups & layers; note that the layer
 // and group options are cast to extended option types `BaseLayerOptions` and
@@ -69,7 +72,7 @@ const map = new Map({
                     title: 'Countries',
                     source: new SourceImageArcGISRest({
                         ratio: 1,
-                        params: {'LAYERS': 'show:0'},
+                        params: { 'LAYERS': 'show:0' },
                         url: "https://ons-inspire.esriuk.com/arcgis/rest/services/Administrative_Boundaries/Countries_December_2016_Boundaries/MapServer"
                     })
                 } as BaseLayerOptions)
@@ -82,11 +85,14 @@ const map = new Map({
     })
 });
 
-const layerSwitcher = new LayerSwitcher({
+const groupStyle: GroupSelectStyle = 'children';
+
+const opts: LsOptions = {
     reverse: true,
-    groupSelectStyle: 'group',
+    groupSelectStyle: groupStyle,
     startActive: true,
     activationMode: 'click'
-});
+};
+const layerSwitcher = new LayerSwitcher(opts);
 
 map.addControl(layerSwitcher);
