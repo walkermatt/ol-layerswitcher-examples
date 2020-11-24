@@ -13,6 +13,6 @@
   },
   "dependencies": {
     "ol": "^6.4.3",
-    "ol-layerswitcher": "^3.8.0-beta.1"
+    "ol-layerswitcher": "^3.8.1"
   }
 }
