@@ -2,10 +2,11 @@
   "name": "ol-layerswitcher-parcel",
   "version": "1.0.0",
   "description": "Example using ol and ol-layerswitcher with Parcel",
-  "main": "index.js",
+  "main": "dist/index.html",
   "scripts": {
     "dev": "parcel index.html",
-    "build": "parcel build --public-url ./ index.html"
+    "build": "parcel build --public-url ./ index.html",
+    "serve": "parcel serve index.html"
   },
   "license": "ISC",
   "devDependencies": {
@@ -13,6 +14,6 @@
   },
   "dependencies": {
     "ol": ">=5.0.0",
-    "ol-layerswitcher": "^3.8.0-beta.1"
+    "ol-layerswitcher": "3.8.3"
   }
 }

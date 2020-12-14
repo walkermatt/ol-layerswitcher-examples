@@ -1,6 +1,3 @@
-import 'ol/ol.css';
-import 'ol-layerswitcher/dist/ol-layerswitcher.css';
-
 import Map from 'ol/Map';
 import View from 'ol/View';
 import { transform } from 'ol/proj';
